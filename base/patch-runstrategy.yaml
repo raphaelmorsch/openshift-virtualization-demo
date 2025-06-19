@@ -1,0 +1,6 @@
+apiVersion: kubevirt.io/v1
+kind: VirtualMachine
+metadata:
+  name: fedora-postgres-vm
+spec:
+  runStrategy: Manual

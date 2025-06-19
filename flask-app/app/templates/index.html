@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>Fruit CRUD</title></head>
+<body>
+    <h1>Fruit List</h1>
+    <ul>
+        {% for fruit in fruits %}
+            <li>{{ fruit[1] }} ({{ fruit[2] }}, {{ fruit[3] }}, {{ fruit[4] }})
+                <form action="/delete/{{ fruit[0] }}" method="post" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Add Fruit</h2>
+    <form action="/add" method="post">
+        <input name="name" placeholder="Fruit name" required>
+        <input name="country" placeholder="Country of origin" required>
+        <input name="taste" placeholder="Taste" required>
+        <input name="season" placeholder="Season" required>
+        <button type="submit">Add</button>
+    </form>
+</body>
+</html>
