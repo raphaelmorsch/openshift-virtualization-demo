@@ -12,6 +12,9 @@ spec:
     metadata:
       labels:
         app: flask-fruits-app
+        app.kubernetes.io/name: flask-fruits
+        app.kubernetes.io/instance: flask-fruits-app
+        app.kubernetes.io/part-of: fruit-crud-app
     spec:
       containers:
         - name: flask-fruits-app
