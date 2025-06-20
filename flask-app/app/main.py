@@ -4,7 +4,7 @@ import psycopg2
 app = Flask(__name__)
 
 # Configure your Postgres VM service here
-DB_HOST = "postgres-vm-service.demo.svc.cluster.local"
+DB_HOST = "postgres-vm-service.demo-user2.svc.cluster.local"
 DB_NAME = "fruits"
 DB_USER = "postgres"
 DB_PASS = ""
