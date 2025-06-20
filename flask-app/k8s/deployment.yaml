@@ -18,3 +18,12 @@ spec:
           image: image-registry.openshift-image-registry.svc:5000/demo-user2/flask-fruits-app:latest
           ports:
             - containerPort: 5000
+          env:
+            - name: POSTGRES_HOST
+              value: postgres-vm-service  # 👉 Service name of your VM
+            - name: POSTGRES_PORT
+              value: "5432"
+            - name: POSTGRES_DB
+              value: fruits
+            - name: POSTGRES_USER
+              value: postgres
