@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: flask-fruits-app
-          image: image-registry.openshift-image-registry.svc:5000/demo/flask-fruits-app:latest
+          image: image-registry.openshift-image-registry.svc:5000/demo-user2/flask-fruits-app:latest
           ports:
             - containerPort: 5000
