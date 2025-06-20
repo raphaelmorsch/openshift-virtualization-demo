@@ -19,7 +19,6 @@ spec:
       name: 'flask-fruits-app:latest'
   triggers:
     - type: ConfigChange
-    - type: ImageChange
     - type: GitHub
       github:
         secret: git-webhook-secret
