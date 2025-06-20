@@ -3,6 +3,10 @@ kind: VirtualMachine
 metadata:
   name: fedora-postgres-vm
   namespace: demo-user2
+  labels:
+    app.kubernetes.io/name: postgres
+    app.kubernetes.io/instance: postgres-vm
+    app.kubernetes.io/part-of: fruit-crud-app
 spec:
   runStrategy: Always
   template:
