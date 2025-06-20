@@ -3,6 +3,11 @@ kind: Deployment
 metadata:
   name: flask-fruits-app
   namespace: demo-user2
+  labels:
+        app.kubernetes.io/part-of: fruit-crud-app
+        app.kubernetes.io/name: flask-fruits
+        app.kubernetes.io/instance: flask-fruits-app
+        app: flask-fruits-app
 spec:
   replicas: 1
   selector:
