@@ -5,6 +5,7 @@ metadata:
   namespace: demo-user2
   labels:
     app.kubernetes.io/component: database
+    app.kubernetes.io/part-of: fruit-crud-app
 spec:
   selector:
     kubevirt.io/domain: fedora-postgres-vm
