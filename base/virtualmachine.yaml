@@ -10,6 +10,20 @@ metadata:
     app: flask-fruits-app
 spec:
   runStrategy: Always
+  dataVolumeTemplates:
+    - metadata:
+        name: fedora-dv
+      spec:
+        pvc:
+          accessModes:
+            - ReadWriteMany  # <-- RWX mode
+          resources:
+            requests:
+              storage: 10Gi
+          storageClassName: <your-rwx-storage-class>  # <-- Replace with actual RWX-enabled SC
+        source:
+          http:
+            url: https://download.fedoraproject.org/pub/fedora/linux/releases/39/Cloud/x86_64/images/Fedora-Cloud-Base-39-1.5.x86_64.raw.xz
   template:
     metadata:
       labels:
