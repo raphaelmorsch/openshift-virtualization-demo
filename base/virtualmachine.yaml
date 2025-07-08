@@ -20,7 +20,6 @@ spec:
           resources:
             requests:
               storage: 10Gi
-          storageClassName: <your-rwx-storage-class>  # <-- Replace with actual RWX-enabled SC
         source:
           http:
             url: https://download.fedoraproject.org/pub/fedora/linux/releases/39/Cloud/x86_64/images/Fedora-Cloud-Base-39-1.5.x86_64.raw.xz
@@ -34,7 +33,9 @@ spec:
     spec:
       domain:
         cpu:
-          cores: 2
+          cores: 1
+          sockets: 2
+          threads: 1
         resources:
           requests:
             memory: 2Gi
